@@ -44,7 +44,7 @@ function HotelResults() {
 
       const response = await fetch(`/api/hotels?${queryParams}`);
       const data = await response.json();
-
+      // console.log(data);
       if (data.success && data.data) {
         setHotels(data.data);
       } else {

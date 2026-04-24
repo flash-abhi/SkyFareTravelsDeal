@@ -32,7 +32,7 @@ router.get('/', async (req, res) => {
           
           // Step 1: Get hotel list by city code
           const hotelListResponse = await searchHotelsByCity({
-            cityCode: cityCode.toUpperCase(),
+            destination: cityCode.toUpperCase(),
             radius: radius || '50',
             radiusUnit: radiusUnit || 'KM',
             ratings: minRating || undefined
@@ -47,8 +47,8 @@ router.get('/', async (req, res) => {
             // Step 2: Get hotel offers for those IDs
             const offersResponse = await getHotelOffers({
               hotelIds: hotelIds,
-              checkInDate: checkInDate,
-              checkOutDate: checkOutDate,
+              checkIn: checkInDate,
+              checkOut: checkOutDate,
               adults: adults || '1',
               roomQuantity: roomQuantity || '1'
             });
@@ -107,8 +107,8 @@ router.get('/', async (req, res) => {
                   originalPrice: parseFloat(offerDetails.price.total)
                 },
                 availability: {
-                  checkInDate: checkInDate,
-                  checkOutDate: checkOutDate,
+                  checkIn: checkInDate,
+                  checkOut: checkOutDate,
                   nights: nights
                 },
                 room: {
@@ -149,9 +149,9 @@ router.get('/', async (req, res) => {
       if (useSabre) {
         try {
           const sabreResults = await sabreClient.searchHotels({
-            cityCode: cityCode.toUpperCase(),
-            checkInDate: checkInDate,
-            checkOutDate: checkOutDate,
+            destination: cityCode.toUpperCase(),
+            checkIn: checkInDate,
+            checkOut: checkOutDate,
             adults: parseInt(adults) || 2,
             rooms: parseInt(roomQuantity) || 1
           });
@@ -547,3 +547,5 @@ router.delete('/:id', async (req, res) => {
 });
 
 module.exports = router;
+
+

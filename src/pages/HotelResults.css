@@ -683,7 +683,7 @@
   gap: 25px;
 }
 
-.hotel-card {
+.hotels-list .hotel-card {
   background: white;
   border-radius: 14px;
   overflow: hidden;
@@ -694,7 +694,7 @@
   border: 2px solid transparent;
 }
 
-.hotel-card:hover {
+.hotels-list .hotel-card:hover {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
   border-color: #667eea;
   transform: translateY(-2px);
@@ -1067,7 +1067,7 @@
     position: static;
   }
 
-  .hotel-card {
+  .hotels-list .hotel-card {
     grid-template-columns: 1fr;
   }
 
@@ -1122,3 +1122,4 @@
     width: 100%;
   }
 }
+
