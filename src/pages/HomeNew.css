@@ -472,11 +472,15 @@
   border-radius: 12px;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, #2e84f0, #1a62bf);
-  color: #fff;
+  background: linear-gradient(135deg, #5592dc, #5a8aca);
+  color: #fff ;
   margin-bottom: 0.62rem;
 }
-
+.hn-feature-icon * {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
 .hn-feature-card h3 {
   margin: 0;
   color: #133563;

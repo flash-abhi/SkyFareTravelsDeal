@@ -103,7 +103,7 @@ const DEALS = [
     perks: ["Old town access", "Buffet breakfast", "Premium room upgrade"],
     badge: "New Offer",
     image:
-      "https://images.unsplash.com/photo-1551776235-dde6d4829808?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
   },
 ];
 
@@ -476,9 +476,9 @@ function Hotels() {
                       Save ${item.original - item.sale}
                     </span>
                   </div>
-                  <button className="hn-card-btn" onClick={handleSearch}>
+                  <a className="hn-card-btn" href={`tel:${(contactSettings.tfn || '+1-888-859-0441').replace(/[^0-9+]/g, '')}`} >
                     Reserve Offer <ArrowRight size={16} />
-                  </button>
+                  </a>
                 </div>
               </article>
             ))}

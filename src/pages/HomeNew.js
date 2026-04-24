@@ -68,7 +68,7 @@ const dealCards = [
     discount: "Save 31%",
     from: 679,
     image:
-      "https://images.unsplash.com/photo-1508264165352-258a6f82b35f?w=1800&auto=format&fit=crop&q=90",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80",
   },
   {
     place: "Maldives Signature",
@@ -196,7 +196,10 @@ function HomeNew() {
               to boarding. Built for travelers who move quick.
             </p>
             <div className="hn-hero-cta">
-              <button onClick={() => navigate("/flights")} className="hn-btn-primary">
+              <button
+                onClick={() => navigate("/flights")}
+                className="hn-btn-primary"
+              >
                 Explore Flights
                 <ArrowRight size={17} />
               </button>
@@ -244,7 +247,10 @@ function HomeNew() {
               <h2>Hot Routes With Live-Like Fare Energy</h2>
               <p>High-demand corridors our travelers are booking today.</p>
             </div>
-            <button className="hn-btn-primary" onClick={() => navigate("/flights")}>
+            <button
+              className="hn-btn-primary"
+              onClick={() => navigate("/flights")}
+            >
               View More
               <ArrowRight size={17} />
             </button>
@@ -331,7 +337,9 @@ function HomeNew() {
           <div className="hn-section-head hn-reveal">
             <div>
               <h2>Why Travelers Stay With Us</h2>
-              <p>Performance-first experience with visible confidence signals.</p>
+              <p>
+                Performance-first experience with visible confidence signals.
+              </p>
             </div>
           </div>
 

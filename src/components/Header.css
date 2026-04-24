@@ -82,6 +82,7 @@
   box-shadow: 0 10px 24px rgba(13, 75, 164, 0.34);
   transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
   overflow: hidden;
+  animation: callButtonPulse 2.2s ease-in-out infinite;
 }
 
 .call-button-animated:hover {
@@ -96,6 +97,8 @@
   justify-content: center;
   position: relative;
   z-index: 2;
+  animation: callIconWiggle 2.2s ease-in-out infinite;
+  transform-origin: 60% 60%;
 }
 
 .call-button-text {
@@ -105,7 +108,6 @@
   position: relative;
   z-index: 2;
 }
-
 .call-button-ring,
 .call-button-ring-2 {
   position: absolute;
@@ -121,6 +123,37 @@
   animation-delay: 0.9s;
 }
 
+
+@keyframes callButtonPulse {
+  0%,
+  45%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  22% {
+    transform: translateY(-1px) scale(1.05);
+  }
+}
+
+@keyframes callIconWiggle {
+  0%,
+  45%,
+  100% {
+    transform: rotate(0deg);
+  }
+  12% {
+    transform: rotate(12deg);
+  }
+  18% {
+    transform: rotate(-10deg);
+  }
+  24% {
+    transform: rotate(8deg);
+  }
+  30% {
+    transform: rotate(-6deg);
+  }
+}
 @keyframes callPing {
   0% {
     opacity: 0.55;
@@ -230,3 +263,6 @@
     padding: 0.52rem 0.66rem;
   }
 }
+
+
+
