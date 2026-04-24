@@ -470,7 +470,7 @@ function Footer() {
           <div className="footer-bottom-content">
             <p className="copyright-legal">
               {siteSettings.copyrightText ||
-                `© 2018-${currentYear} TraveloFare, Inc. All rights reserved.`}{" "}
+                `© 2018-${currentYear} SkyFareTravelsDeals, Inc. All rights reserved.`}{" "}
               <Link to="/privacy">Privacy Policy</Link> and agree to our{" "}
               <Link to="/terms">Terms and Conditions</Link>.
             </p>
