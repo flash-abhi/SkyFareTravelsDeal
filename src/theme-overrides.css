@@ -49,9 +49,16 @@ p {
 [class$="-page"] section,
 .home-new section,
 .airlines-new section {
+
   margin-top: 1.25rem;
 }
 
+
+/* Remove header-to-hero gap for first section on key pages */
+.home-new section:first-of-type,
+.flights-page section:first-of-type {
+  margin-top: 0;
+}
 .hero,
 .hero-section,
 .airlines-hero,
@@ -385,3 +392,4 @@ th {
     border-radius: 14px;
   }
 }
+
