@@ -1,0 +1,81 @@
+.sticky-call-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1100;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.65rem 0.92rem;
+  border-radius: 999px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2d86ff, #135fc6);
+  box-shadow: 0 16px 34px rgba(19, 95, 198, 0.46);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sticky-call-button:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px rgba(19, 95, 198, 0.56);
+}
+
+.call-pulse {
+  position: absolute;
+  inset: -3px;
+  border-radius: inherit;
+  border: 1px solid rgba(143, 194, 255, 0.85);
+  pointer-events: none;
+  animation: stickyPulse 1.9s infinite;
+}
+
+@keyframes stickyPulse {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  40% {
+    opacity: 0.72;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.12);
+  }
+}
+
+.call-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.call-label {
+  font-size: 0.65rem;
+  opacity: 0.88;
+}
+
+.call-number {
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .sticky-call-button {
+    right: 14px;
+    bottom: 14px;
+  }
+}
+
+@media (max-width: 540px) {
+  .sticky-call-button {
+    border-radius: 50%;
+    min-height: 50px;
+    min-width: 50px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .call-text {
+    display: none;
+  }
+}

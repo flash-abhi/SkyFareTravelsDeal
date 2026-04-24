@@ -1,0 +1,101 @@
+.airport-autocomplete {
+  position: relative;
+  width: 100%;
+}
+
+.airport-input-wrapper {
+  width: 100%;
+}
+
+.airport-input {
+  width: 100%;
+  min-height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(20, 49, 95, 0.17);
+  background: #ffffff;
+  color: #132d56;
+  padding: 0.65rem 0.76rem;
+}
+
+.airport-input:focus {
+  outline: none;
+  border-color: #2d86ff;
+  box-shadow: 0 0 0 3px rgba(45, 134, 255, 0.14);
+}
+
+.suggestions-dropdown {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  left: 0;
+  right: 0;
+  z-index: 1500;
+  max-height: 280px;
+  overflow-y: auto;
+  border-radius: 14px;
+  border: 1px solid rgba(20, 49, 95, 0.14);
+  background: #ffffff;
+  box-shadow: 0 20px 42px rgba(12, 33, 73, 0.2);
+  padding: 0.4rem;
+}
+
+.suggestion-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.55rem 0.6rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background: rgba(34, 113, 255, 0.08);
+}
+
+.suggestion-main {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.airport-code {
+  min-width: 46px;
+  text-align: center;
+  border-radius: 8px;
+  padding: 0.2rem 0.35rem;
+  background: linear-gradient(135deg, #2d86ff, #115cc8);
+  color: #ffffff;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+}
+
+.airport-city {
+  font-weight: 700;
+  color: #10213f;
+  font-size: 0.86rem;
+}
+
+.suggestion-details {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  color: #486185;
+  font-size: 0.75rem;
+}
+
+.airport-name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.airport-country {
+  white-space: nowrap;
+}
+
+.no-results {
+  text-align: center;
+  color: #486185;
+  padding: 0.8rem;
+  font-size: 0.82rem;
+}

@@ -1,0 +1,387 @@
+:root {
+  --tf-bg: #f2f6ff;
+  --tf-surface: rgba(255, 255, 255, 0.92);
+  --tf-surface-strong: #ffffff;
+  --tf-text: #10213f;
+  --tf-text-soft: #486185;
+  --tf-border: rgba(16, 33, 63, 0.12);
+  --tf-primary: #1f7cff;
+  --tf-primary-strong: #145fc9;
+  --tf-accent: #ff8c39;
+  --tf-accent-strong: #e45f0f;
+  --tf-shadow: 0 16px 34px rgba(12, 33, 73, 0.12);
+  --tf-radius: 18px;
+}
+
+body {
+  color: var(--tf-text);
+  background: var(--tf-bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--tf-text);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+p {
+  color: var(--tf-text-soft);
+}
+
+[class$="-page"],
+.home-new,
+.airlines-new {
+  width: min(1240px, calc(100% - 2rem));
+  margin-inline: auto;
+  padding: 1.1rem 0 3rem;
+}
+
+.home-new {
+  width: 100%;
+  padding-top: 0;
+}
+
+[class$="-page"] section,
+.home-new section,
+.airlines-new section {
+  margin-top: 1.25rem;
+}
+
+.hero,
+.hero-section,
+.airlines-hero,
+.blog-hero,
+.legal-hero {
+  position: relative;
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid var(--tf-border);
+  box-shadow: var(--tf-shadow);
+}
+
+.hero::before,
+.hero-section::before,
+.airlines-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(130deg, rgba(7, 23, 51, 0.72), rgba(7, 23, 51, 0.36));
+  pointer-events: none;
+}
+
+.hero > *,
+.hero-section > *,
+.airlines-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1,
+.hero-section h1,
+.airlines-hero h1,
+.hero p,
+.hero-section p,
+.airlines-hero p {
+  color: #f6fbff;
+}
+
+.hero-highlight {
+  color: #9fcbff;
+}
+
+.search-card,
+.search-widget,
+.search-box-modern,
+.contact-card,
+.faq-item,
+.topic-card,
+.method-card,
+.mission-card,
+.settings-card,
+.security-panel,
+.seo-tool-content,
+.card,
+.deal-card,
+.route-card,
+.flight-card,
+.hotel-card,
+.testimonial-card,
+.stat-card,
+.feature-card,
+.info-card {
+  border-radius: var(--tf-radius);
+  border: 1px solid var(--tf-border);
+  background: var(--tf-surface);
+  box-shadow: var(--tf-shadow);
+  backdrop-filter: blur(7px);
+}
+
+.route-card-modern,
+.deal-showcase-card,
+.destination-card,
+.airline-card-new {
+  border-radius: var(--tf-radius);
+  border: 1px solid var(--tf-border);
+  overflow: hidden;
+  box-shadow: var(--tf-shadow);
+}
+
+.routes-grid,
+.routes-grid-new,
+.deals-grid,
+.deals-showcase-grid,
+.destinations-grid,
+.testimonials-grid,
+.features-grid,
+.airlines-grid,
+.flight-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.routes-grid,
+.destinations-grid,
+.airlines-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.deals-grid,
+.deals-showcase-grid,
+.features-grid,
+.testimonials-grid {
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.flight-cards {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.section-header,
+.section-head,
+.showcase-header {
+  margin-bottom: 1rem;
+}
+
+.section-header h2,
+.section-head h2,
+.showcase-header h2 {
+  font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2.1rem);
+}
+
+.section-header p,
+.section-head p,
+.showcase-header p {
+  margin-top: 0.3rem;
+  color: var(--tf-text-soft);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  min-height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(20, 49, 95, 0.17);
+  background: #ffffff;
+  color: #132d56;
+  padding: 0.65rem 0.78rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--tf-primary);
+  box-shadow: 0 0 0 3px rgba(45, 134, 255, 0.14);
+}
+
+label,
+.label,
+.field-label {
+  color: #466082;
+}
+
+button,
+.btn-primary,
+.search-flights-btn,
+.search-btn,
+.search-btn-modern,
+.search-button,
+.cta-button,
+.book-btn,
+.deal-btn,
+.submit-btn,
+.save-button,
+.retry-btn,
+.refresh-btn,
+.view-btn,
+.view-flights-btn,
+.page-btn,
+.action-btn,
+.agent-btn,
+.btn-save-settings {
+  border: none;
+  color: #ffffff;
+  border-radius: 12px;
+  min-height: 42px;
+  padding: 0.64rem 1rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--tf-accent), var(--tf-accent-strong));
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover,
+.btn-primary:hover,
+.search-flights-btn:hover,
+.search-btn:hover,
+.search-button:hover,
+.cta-button:hover,
+.book-btn:hover,
+.deal-btn:hover,
+.submit-btn:hover,
+.save-button:hover,
+.view-btn:hover,
+.view-flights-btn:hover,
+.action-btn:hover,
+.agent-btn:hover,
+.btn-save-settings:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(206, 92, 18, 0.26);
+}
+
+.btn-secondary,
+.control-btn,
+.preset-btn,
+.toggle-switch,
+.trip-tab,
+.trip-btn {
+  background: #ffffff;
+  color: #1d468a;
+  border: 1px solid rgba(20, 49, 95, 0.2);
+}
+
+.tag,
+.search-tag,
+.deal-badge,
+.deal-badge-new,
+.service-pill,
+.hero-badge,
+.airline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.34rem 0.64rem;
+  border-radius: 999px;
+  background: rgba(31, 124, 255, 0.13);
+  color: #154e9f;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.price,
+.price-large,
+.current-price,
+.sale,
+.price-amount,
+.total-amount,
+.amount {
+  color: #0f4fb2;
+  font-weight: 800;
+}
+
+.stat-value,
+.stat-number,
+.big-number,
+.metric-value {
+  color: #133d7d;
+  font-weight: 800;
+}
+
+.stat-label,
+.metric-label,
+.detail-label,
+.contact-label,
+.availability {
+  color: #4c6283;
+}
+
+.footer a,
+.copyright-legal a {
+  color: #9fcbff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--tf-surface-strong);
+  border: 1px solid var(--tf-border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 0.68rem 0.72rem;
+  border-bottom: 1px solid rgba(20, 49, 95, 0.1);
+  text-align: left;
+}
+
+th {
+  background: rgba(31, 124, 255, 0.12);
+  color: #1a3f7e;
+  font-size: 0.82rem;
+}
+
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.scroll-animate.animate-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 900px) {
+  [class$="-page"],
+  .airlines-new {
+    width: min(1240px, calc(100% - 1.2rem));
+  }
+
+  .home-new section {
+    margin-top: 0.9rem;
+  }
+}
+
+@media (max-width: 640px) {
+  [class$="-page"],
+  .home-new,
+  .airlines-new {
+    width: min(1240px, calc(100% - 0.9rem));
+  }
+
+  .hero,
+  .hero-section,
+  .airlines-hero {
+    border-radius: 18px;
+  }
+
+  .search-card,
+  .search-widget,
+  .card,
+  .deal-card,
+  .route-card,
+  .flight-card,
+  .hotel-card,
+  .testimonial-card,
+  .stat-card,
+  .feature-card {
+    border-radius: 14px;
+  }
+}

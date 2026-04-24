@@ -1,0 +1,24 @@
+:root {
+  --bg-app: #f2f6ff;
+  --text-main: #10213f;
+}
+
+.App {
+  min-height: 100vh;
+  color: var(--text-main);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(29, 113, 255, 0.16), transparent 38%),
+    radial-gradient(circle at 100% 12%, rgba(255, 146, 46, 0.18), transparent 32%),
+    radial-gradient(circle at 72% 100%, rgba(27, 196, 173, 0.12), transparent 36%),
+    var(--bg-app);
+}
+
+.app-main {
+  flex: 1;
+  width: 100%;
+}
+
+.app-main.is-admin {
+  display: flex;
+  align-items: stretch;
+}
