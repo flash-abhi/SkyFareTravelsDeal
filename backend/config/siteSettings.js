@@ -12,19 +12,19 @@ const SETTINGS_FILE = path.join(__dirname, '..', 'data', 'siteSettings.json');
 // Default site settings
 const defaults = {
   // Branding
-  siteName: "TraveloFare",
+  siteName: "SkyFare Travels Deals",
   tagline: "Lock Your Fare. Unlock Your Journey.",
   logoUrl: "/logo.svg",
   faviconUrl: "/favicon.ico",
 
   // Contact
   tfn: "+1-888-859-0441",
-  email: "support@skyfaretravelsdeals.com",
+  email: "info@skyfaretravelsdeals.com",
   workingHours: "Mon-Sun 24/7",
 
   // Billing / Business Address
   billingAddress: {
-    company: "TraveloFare, Inc.",
+    company: "SkyFareTravelsDeals, Inc.",
     street: "1309 Coffeen Ave STE 1200",
     city: "Sheridan",
     state: "WY",
@@ -33,7 +33,7 @@ const defaults = {
   },
 
   // Legal
-  copyrightText: "© 2006-{year} TraveloFare, Inc. All rights reserved.",
+  copyrightText: "© 2006-{year} SkyFareTravelsDeals, Inc. All rights reserved.",
 
   // Social Links
   socialLinks: {
